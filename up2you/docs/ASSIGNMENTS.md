@@ -15,17 +15,19 @@ Owners: Assistant (AI) and Ara. Split covers the 16 selected tasks from `docs/TA
 - **Base URL**: `http://localhost:3000/api`
 - **Stripe**: `POST /stripe/create-payment-intent` is ready for frontend hookup.
 - **Setup**: Copy `backend/.env.example` to `backend/.env` and add your test keys.
-- **Next**: I am moving on to T-M2-01 (Availability Calendars). Let me know if you need specific profile fields exposed for the auth flow.
+- **Next**: I am moving on to T-M2-02 (Booking Flows), as T-M2-01 is being handed off to Claude.
 
-## Assistant — Assigned (8)
+## Assistant — Assigned (7)
 - T-M0-01: Establish repo structure and documentation
 - T-M0-02: Decide baseline tech stack and environment setup
 - T-M0-03: Set up linting, formatting, and CI skeleton
 - T-M0-04: Define environments and secrets management
-- T-M2-01: Implement availability calendars for coordinators
 - T-M2-02: Build booking flows with constraints
 - T-M3-01: Connect payment provider (Stripe)
 - T-M3-02: Implement product pricing and invoices
+
+## Claude — Assigned (1)
+- T-M2-01: Implement availability calendars for coordinators
 
 ## Ara — Assigned (8)
 - T-M1-01: Implement email/password and OAuth login
