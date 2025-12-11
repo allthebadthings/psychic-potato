@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Up2You</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
+    main { max-width: 720px; margin: 40px auto; padding: 24px; background: #111827; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.35); }
+    h1 { margin: 0 0 12px; font-size: 28px; color: #93c5fd; }
+    .card { margin-top: 16px; padding: 16px; border: 1px solid #334155; border-radius: 8px; }
+    .label { color: #94a3b8; }
+    .value { color: #f8fafc; }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <main>
+    <h1>Up2You</h1>
+    <p class="label">This deployment exposes API endpoints on Vercel.</p>
+    <div class="card">
+      <div><span class="label">Root:</span> <span class="value">/</span></div>
+      <div><span class="label">Health:</span> <span class="value"><a href="/health">/health</a></span></div>
+      <div><span class="label">Stripe Config:</span> <span class="value"><a href="/api/stripe/config">/api/stripe/config</a></span></div>
+    </div>
+    <div class="card" id="dynamic">
+      <div><span class="label">Live Health:</span> <span class="value" id="healthValue">Loading…</span></div>
+      <div><span class="label">Stripe:</span> <span class="value" id="stripeValue">Loading…</span></div>
+    </div>
+  </main>
+  <script>
+    async function load() {
+      try {
+        const h = await fetch('/health');
+        document.getElementById('healthValue').textContent = h.ok ? JSON.stringify(await h.json()) : 'Unavailable';
+      } catch { document.getElementById('healthValue').textContent = 'Unavailable'; }
+      try {
+        const s = await fetch('/api/stripe/config');
+        document.getElementById('stripeValue').textContent = s.ok ? JSON.stringify(await s.json()) : 'Unavailable';
+      } catch { document.getElementById('stripeValue').textContent = 'Unavailable'; }
+    }
+    load();
+  </script>
+</body>
+</html>
