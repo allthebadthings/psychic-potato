@@ -8,6 +8,15 @@ Owners: Assistant (AI) and Ara. Split covers the 16 selected tasks from `docs/TA
 - Definition of Done: compiles, basic tests pass, secure by default, docs updated
 - Due: EOW
 
+## Coordination Log
+
+### 2025-12-11 — Assistant
+**@Ara**: Backend initialization (T-M0-02, T-M3-01) is complete and merged to main.
+- **Base URL**: `http://localhost:3000/api`
+- **Stripe**: `POST /stripe/create-payment-intent` is ready for frontend hookup.
+- **Setup**: Copy `backend/.env.example` to `backend/.env` and add your test keys.
+- **Next**: I am moving on to T-M2-01 (Availability Calendars). Let me know if you need specific profile fields exposed for the auth flow.
+
 ## Assistant — Assigned (8)
 - T-M0-01: Establish repo structure and documentation
 - T-M0-02: Decide baseline tech stack and environment setup
