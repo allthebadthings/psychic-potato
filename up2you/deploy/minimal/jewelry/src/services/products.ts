@@ -164,7 +164,7 @@ export const productService = {
       console.error('Error fetching Shopify products')
       return []
     }
-  },
+  }
 
   async getEbayProducts(q: string = 'jewelry'): Promise<Product[]> {
     try {

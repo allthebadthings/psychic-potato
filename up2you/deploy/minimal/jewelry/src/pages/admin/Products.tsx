@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import Button from '../../components/ui/Button'
-import Input from '../../components/ui/Input'
-import Card from '../../components/ui/Card'
+import { Button } from '../../components/ui/Button'
+import { Input } from '../../components/ui/Input'
+import { Card } from '../../components/ui/Card'
 
 export default function AdminProducts() {
   const [products, setProducts] = useState<any[]>([])
@@ -120,27 +120,27 @@ export default function AdminProducts() {
             <Input
               label="Name"
               value={formData.name}
-              onChange={(value: string) => setFormData({...formData, name: value})}
+              onChange={e => setFormData({...formData, name: e.target.value})}
               required
             />
             <Input
               label="Description"
               value={formData.description}
-              onChange={(value: string) => setFormData({...formData, description: value})}
+              onChange={e => setFormData({...formData, description: e.target.value})}
             />
             <div className="grid grid-cols-2 gap-4">
               <Input
                 label="Price"
                 type="number"
                 value={formData.price}
-                onChange={(value: string) => setFormData({...formData, price: value})}
+                onChange={e => setFormData({...formData, price: e.target.value})}
                 required
               />
               <Input
                 label="Stock"
                 type="number"
                 value={formData.stock_quantity}
-                onChange={(value: string) => setFormData({...formData, stock_quantity: value})}
+                onChange={e => setFormData({...formData, stock_quantity: e.target.value})}
                 required
               />
             </div>
@@ -148,17 +148,17 @@ export default function AdminProducts() {
               <Input
                 label="Category"
                 value={formData.category}
-                onChange={(value: string) => setFormData({...formData, category: value})}
+                onChange={e => setFormData({...formData, category: e.target.value})}
               />
               <Input
                 label="Metal"
                 value={formData.metal_type}
-                onChange={(value: string) => setFormData({...formData, metal_type: value})}
+                onChange={e => setFormData({...formData, metal_type: e.target.value})}
               />
               <Input
                 label="Gemstone"
                 value={formData.gemstone}
-                onChange={(value: string) => setFormData({...formData, gemstone: value})}
+                onChange={e => setFormData({...formData, gemstone: e.target.value})}
               />
             </div>
             <div className="flex justify-end gap-2">

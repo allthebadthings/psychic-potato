@@ -3,7 +3,7 @@ import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'google' | 'ghost' | 'outline' | 'danger';
+  variant?: 'primary' | 'secondary' | 'google' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   rounded?: 'sm' | 'md' | 'lg' | 'full';
   shadow?: 'none' | 'sm' | 'md';
@@ -33,9 +33,7 @@ const Button: React.FC<ButtonProps> = ({
     primary: 'bg-primary-blue text-white hover:bg-primary-blue/90 focus:ring-primary-blue',
     secondary: 'bg-white text-neutral-700 hover:bg-neutral-50 focus:ring-neutral-300 border border-neutral-200',
     google: 'bg-white text-neutral-700 hover:bg-neutral-50 focus:ring-neutral-300 border border-neutral-200',
-    ghost: 'bg-transparent text-neutral-700 hover:bg-neutral-100 focus:ring-neutral-300',
-    outline: 'bg-transparent border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-indigo-500',
-    danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500'
+    ghost: 'bg-transparent text-neutral-700 hover:bg-neutral-100 focus:ring-neutral-300'
   };
 
   const sizeClasses = {

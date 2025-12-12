@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Button from '../../components/ui/Button'
-import Input from '../../components/ui/Input'
+import { Button } from '../../components/ui/Button'
+import { Input } from '../../components/ui/Input'
 
 export default function AdminLogin() {
   const navigate = useNavigate()
@@ -57,7 +57,7 @@ export default function AdminLogin() {
               type="text"
               placeholder="Dev Admin Token"
               value={devToken}
-              onChange={(value: string) => setDevToken(value)}
+              onChange={(e) => setDevToken(e.target.value)}
             />
             <Button onClick={handleDevLogin} variant="outline">
               Set Token

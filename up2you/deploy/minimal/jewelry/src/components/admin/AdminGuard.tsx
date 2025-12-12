@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
-import Layout from '../Layout'
+import Layout from './Layout'
 
 interface AuthState {
   checked: boolean
