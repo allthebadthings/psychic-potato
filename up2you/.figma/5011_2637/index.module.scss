@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+.heroUiv3 {
+  display: flex;
+  align-items: flex-start;
+  background: #f5f5f5;
+  padding-right: 75px;
+  padding-bottom: 81px;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+
+  .autoWrapper3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    margin-top: -211px;
+    margin-left: -227px;
+
+    .autoWrapper {
+      position: relative;
+      margin-top: -211px;
+      width: 952px;
+      height: 939px;
+
+      .frame2147225311 {
+        display: flex;
+        position: absolute;
+        right: -347px;
+        bottom: -203px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 941px;
+        height: 228px;
+        row-gap: 43px;
+
+        .vector {
+          flex-shrink: 0;
+          width: 335px;
+          height: 102px;
+        }
+
+        .designSystemForFigma {
+          flex-shrink: 0;
+          align-self: stretch;
+          line-height: 83px;
+          letter-spacing: -0.32px;
+          color: #18181b;
+          font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 64px;
+          font-weight: 500;
+        }
+      }
+
+      .logoBase {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 952px;
+        height: 939px;
+      }
+    }
+
+    .autoWrapper2 {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      justify-content: space-between;
+      margin-top: 219px;
+      padding-right: 259px;
+      padding-left: 358px;
+
+      .v300Beta {
+        line-height: 52px;
+        letter-spacing: -0.2px;
+        color: #71717a;
+        font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      .frame2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 9px;
+        border-radius: 16px;
+        background: #e6f1fe;
+        padding-right: 12px;
+        padding-left: 12px;
+        width: 71px;
+        height: 36px;
+
+        .chip {
+          flex-shrink: 0;
+          line-height: 28px;
+          letter-spacing: 0;
+          color: #006fee;
+          font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .image2 {
+    margin-top: 185px;
+    margin-left: 536px;
+    width: 585px;
+    height: 814px;
+  }
+}

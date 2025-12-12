@@ -1,0 +1,14 @@
+{
+  "name": "up2you-monorepo",
+  "version": "1.0.0",
+  "description": "Up2You Jewelry Shop and Admin Platform",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../jewelry && npm install",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix jewelry\"",
+    "build": "cd backend && npm run build && cd ../jewelry && npm run build",
+    "deploy:prep": "node -e \"console.log('Use the existing deploy/minimal folder or regenerate it manually if needed.')\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

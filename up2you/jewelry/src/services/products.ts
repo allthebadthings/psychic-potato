@@ -144,5 +144,35 @@ export const productService = {
 
     const metalTypes = data?.map(item => item.metal_type) || []
     return [...new Set(metalTypes)] // Remove duplicates
+  },
+
+  async getShopifyConfig(): Promise<{ configured: boolean }> {
+    try {
+      const res = await fetch('/api/shopify/config')
+      return await res.json()
+    } catch {
+      return { configured: false }
+    }
+  },
+
+  async getShopifyProducts(): Promise<Product[]> {
+    try {
+      const res = await fetch('/api/shopify/products')
+      if (!res.ok) throw new Error('Failed to fetch Shopify products')
+      return await res.json()
+    } catch {
+      console.error('Error fetching Shopify products')
+      return []
+    }
+  }
+
+  async getEbayProducts(q: string = 'jewelry'): Promise<Product[]> {
+    try {
+      const res = await fetch(`/api/ebay/products?q=${encodeURIComponent(q)}`)
+      if (!res.ok) return []
+      return await res.json()
+    } catch {
+      return []
+    }
   }
 }
