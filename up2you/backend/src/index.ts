@@ -3,7 +3,9 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import { stripeRoutes } from './routes/stripe.js';
+import { stripeRoutes } from './routes/stripe.ts';
+import { requireAdmin } from './middleware/auth.ts';
+import { adminRoutes } from './routes/admin/index.ts';
 
 dotenv.config();
 
@@ -30,6 +32,7 @@ app.get('/health', (req, res) => {
 });
 
 app.use('/api/stripe', stripeRoutes);
+app.use('/api/admin', requireAdmin, adminRoutes);
 
 // Root handler
 app.get('/', (req, res) => {

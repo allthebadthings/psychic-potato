@@ -14,6 +14,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
 // Create Payment Intent
 router.post('/create-payment-intent', async (req: Request, res: Response) => {
   try {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      res.status(400).json({ error: 'Stripe not configured' });
+      return;
+    }
     const { amount, currency = 'usd' } = req.body;
 
     const paymentIntent = await stripe.paymentIntents.create({
@@ -25,6 +29,11 @@ router.post('/create-payment-intent', async (req: Request, res: Response) => {
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }
+});
+
+// Config status
+router.get('/config', (req: Request, res: Response) => {
+  res.json({ configured: Boolean(process.env.STRIPE_SECRET_KEY), webhook: Boolean(process.env.STRIPE_WEBHOOK_SECRET) });
 });
 
 // Webhook Handler
