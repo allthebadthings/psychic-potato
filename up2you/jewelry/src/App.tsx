@@ -11,6 +11,7 @@ import AdminGuard from './components/admin/AdminGuard'
 import AdminLogin from './pages/admin/Login'
 import AdminDashboard from './pages/admin/Dashboard'
 import AdminProducts from './pages/admin/Products'
+import Auth0Demo from './pages/Auth0Demo'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="confirmation" element={<Confirmation />} />
+          <Route path="auth0" element={<Auth0Demo />} />
         </Route>
         
         {/* Admin Routes */}
